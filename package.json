@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "publish:npm": "./scripts/buildnpm.sh",
-    "babel:react": "babel ./packages/button/*.component.js -d dist --copy-files"
+    "publish:npm": "./scripts/buildnpm.sh"
   },
   "babel": {
     "presets": [
