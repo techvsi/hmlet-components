@@ -3,7 +3,10 @@ import './css/button.component.css';
 
 class ButtonComponent extends React.Component {
   render() {
-    return React.createElement("button", null, "Sample button");
+    return React.createElement("button", {
+      className: "sample-button",
+      onClick: this.props.actionClick
+    }, this.props.label);
   }
 
 }
