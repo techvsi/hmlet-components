@@ -2,7 +2,9 @@
 components=$(ls ./packages)
 for component in ${components[*]}
 do
-  rm -f ./packages/$component/dist/
-  mkdir ./packages/$component/dist/
-  npx babel ./packages/$component/src/*.component.js -d ./packages/$component/dist/ --copy-files
+  rm -rf $component
+  mkdir $component
+  npx babel ./packages/$component/src/*.component.js -d ./$component --copy-files
+  cp -r ./packages/$component/css ./$component
+  mv ./$component/*.js ./$component/index.js
 done
